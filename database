@@ -79,4 +79,18 @@ select player_id, min(event_date) as first_login
 from activity 
 group by player_id
 
+11. place largest number of orders
+
+select customer_number from orders
+group by customer_number
+order by count(*) desc limit 1
+
+12. swap m and f
+
+update Salary
+set sex = case
+    when sex = "m" then "f"
+    else "m"
+end
+
 
